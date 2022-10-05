@@ -30,6 +30,9 @@ class Url extends Tag
     /** @var array */
     public $alternates = [];
 
+    /** @var array */
+    public array $images = [];
+
     public static function create(string $url): self
     {
         return new static($url);
