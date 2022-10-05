@@ -106,6 +106,14 @@ class Url extends Tag
         return $this;
     }
 
+    public function addImage(string $url, string $caption = '', string $geo_location = '', string $title = '', string $license = '')
+    {
+        $this->images[] = new Image($url, $caption, $geo_location, $title, $license);
+
+        return $this;
+    }
+
+
     /**
      * @return string
      */
