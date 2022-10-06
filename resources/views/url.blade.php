@@ -17,4 +17,5 @@
         <priority>{{ number_format($tag->priority,1) }}</priority>
     @endif
     @each('laravel-sitemap::image', $tag->images, 'image')
+    @each('laravel-sitemap::video', $tag->videos, 'video')
 </url>

@@ -33,6 +33,9 @@ class Url extends Tag
     /** @var array */
     public array $images = [];
 
+    /** @var array */
+    public array $videos = [];
+
     public static function create(string $url): self
     {
         return new static($url);
@@ -116,6 +119,12 @@ class Url extends Tag
         return $this;
     }
 
+    public function addVideo(string $url, string $type)
+    {
+        $this->videos[] = new Video($url, $type);
+
+        return $this;
+    }
 
     /**
      * @return string
